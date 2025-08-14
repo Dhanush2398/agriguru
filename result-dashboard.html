@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Exam Results Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .container {
+      padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Stats Cards */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: #4CAF50;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #ffffff;
+    }
+
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0.5rem 0 0;
+      color: #ffffff;
+    }
+
+     table {
+        width: 100%;
+        border-collapse: collapse;
+        /* overflow-x: auto; */
+        /* box-shadow: 0 4px 20px rgba(0,0,0,0.1); */
+    }
+ 
+    th, td {
+        font-size: 18px;
+        font-family: 'Times New Roman', Times, serif;
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: center;
+    }
+
+
+     @media (max-width: 768px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+            width: 88%;
+        }
+        thead {
+            display: none; /* Hide table headers */
+        }
+        tr {
+            margin-bottom: 15px;
+            /* border: 1px solid #ccc; */
+            padding: 10px;
+            /* background: #ccc;  */
+        }
+        td {
+            text-align: center;
+            padding-left: 50%;
+            position: relative;
+        }
+        td::before {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 45%;
+            /* white-space: nowrap; */
+            font-weight: bold;
+            color: #333;
+            content: attr(data-label);
+        }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  Online Mock Exam Dashboard
+</header>
+<br>
+<br><br><br>
+
+<div class="container">
+  <!-- Stats Cards -->
+  <div class="stats">
+    <div class="card">
+      <h3>Total Exams Taken</h3>
+      <p>15</p>
+    </div>
+    <div class="card">
+      <h3>Average Score</h3>
+      <p>78%</p>
+    </div>
+    <div class="card">
+      <h3>Highest Score</h3>
+      <p>95%</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br><br>
+
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Score</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Subject">Agronomy</td>
+        <td data-label="Date">2025-08-10</td>
+        <td data-label="Score">88%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+      <tr>
+        <td data-label="Subject">Entomology</td>
+        <td data-label="Date">2025-08-05</td>
+        <td data-label="Score">72%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+      <tr>
+        <td data-label="Subject">Plant Science</td>
+        <td data-label="Date">2025-07-28</td>
+        <td data-label="Score">65%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+      <tr>
+        <td data-label="Subject">Soil Science</td>
+        <td data-label="Date">2025-08-05</td>
+        <td data-label="Score">70%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+      <tr>
+        <td data-label="Subject">Soil Seed</td>
+        <td data-label="Date">2025-08-05</td>
+        <td data-label="Score">82%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+      <tr>
+        <td data-label="Subject">Plant Breeding</td>
+        <td data-label="Date">2025-08-05</td>
+        <td data-label="Score">92%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+      <tr>
+        <td data-label="Subject">Seed Science</td>
+        <td data-label="Date">2025-08-05</td>
+        <td data-label="Score">95%</td>
+        <td data-label="Status">Pass</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br><br>
+
+<footer style="background:#222; color:#fff; padding:10px 0; text-align:center; font-size:14px;">
+  <div style="max-width:1000px; margin:auto; padding:0 10px;">
+    <p>&copy; 2025 Online Mock Exams. All Rights Reserved.</p>
+    <p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+    
+        
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.navbar .logo {
+  height: 50px;
+  width: 50px;
+}
+.auth-buttons button {
+  background: #ffffff;
+  color: #263238;
+  border: none;
+  padding: 8px 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.nav-links {
+    list-style: none;
+    display: flex; /* places links in a row */
+    gap: 20px;     /* space between links */
+    padding: 0;
+    margin: 0;
+  }
+   .nav-links a {
+    text-decoration: none;
+    font-weight: bold; /* makes links bold */
+    color: #ffffff;      /* change color if needed */
+  }
+
+  .toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav-links,
+  .auth-buttons {
+    display: none;
+    flex-direction: column;
+    background: #4CAF50;
+    gap: 5px;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .nav-links.show,
+  .auth-buttons.show {
+    display: flex;
+  }
+  .toggle {
+    display: block;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+
+    /* Navbar */
+    /* .navbar {
+        height: 90px;
+        background: #4CAF50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    } */
+
+    /* Footer */
+    .footer {
+        background: #4CAF50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin-top: auto; /* Push footer to bottom */
+    }
+     .main {
+        flex: 1; /* Take up available space */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Login box */
+    .login-container {
+        background: white;
+        padding: 20px;
+        max-height: 400px;
+        max-width: 400px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .login-container h2 {
+        color: #4CAF50;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .login-container input {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+     .login-container button {
+        font-size: 14px;
+        width: 90%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .login-container button a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .register-link a{
+        color: #4CAF50;
+    }
+
+    .register-link {
+        font-size: 18px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+
+    @media (max-width: 500px) {
+        .login-container {
+            padding: 15px;
+        }
+    }
+
+.footer {
+    background-color: #4CAF50;
+}
+        
+    </style>
+    
+</head>
+<body>
+<nav class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="img/logo.jpg" alt="logo" height="50px">
+  </div>
+
+  <!-- Toggle button -->
+  <div class="toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- Links -->
+  <div class="nav-links" id="navLinks">
+    <a href="#Home" style="color:white; text-decoration:none;">Home</a>
+    <a href="#Blog" style="color:white; text-decoration:none;">Blog</a>
+    <a href="courses.html" style="color:white; text-decoration:none;">Courses</a>
+    <a href="#Exams" style="color:white; text-decoration:none;">Exams</a>
+    <a href="#Contact" style="color:white; text-decoration:none;">Contact</a>
+    <a href="profiles.html" style="color:white; text-decoration:none;">Profiles</a>
+  </div>
+
+  <!-- Auth buttons -->
+  <div class="auth-buttons" id="authButtons">
+    <a href="login.html"><button>Login</button>
+    </a>
+    <a href="sign-up.html"><button>Sign Up</button>
+    </a>
+  </div>
+</nav>
+
+     <!-- <div class="navbar">
+        <h1 style="font-size: 24px; font-family: 'Times New Roman', Times, serif;">AGRI GURU</h1>
+        <p style="font-size: 18px; font-family: 'Times New Roman', Times, serif;">Empowering Rural Youth Through Education</p>
+    </div> -->
+
+    <!-- Main section -->
+    <div class="main">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit"><a href="result-dashboard.html">Login</a></button>
+                 
+            </form>
+            <p class="register-link">
+      Don't have an account? <a href="sign-up.html">Sign Up</a>
+    </p>
+  </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Agri Guru | All Rights Reserved</p>
+    </div>
+
+<script src="main.js"></script> 
+</body>
+</html>
