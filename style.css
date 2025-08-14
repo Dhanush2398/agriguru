@@ -109,7 +109,7 @@ body {
   .navbar .logo img {
     height: 60px;
     width: 60px;  
-    margin-left: 5px;
+    margin-left: 10px;
   }
 }
 
@@ -117,21 +117,32 @@ body {
   .navbar .logo img {
     height: 70px; 
     width:70px;
-    margin-left: 5px;
+    margin-left: 10px;
   }
 }
-
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 15px;   
+    position: absolute; 
+    top: 100%;         
+    left: 0;
+    background: #fff;   
+    z-index: 1000;      
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    align-items: flex-start;  
   }
 
   .nav-links.show {
     display: flex;
+  }
+
+  .nav-links a {
+    text-align: left;  
+    width: 100%;       
   }
 
   .nav-links .auth-buttons {
@@ -139,18 +150,19 @@ body {
     gap: 10px;
     width: 100%;
     padding: 0;
+    align-items: flex-start; 
   }
 
   .nav-links .auth-buttons button {
-    width: 100%;
-    text-align: center;
+    width:40%;
     margin: 0;
+    padding-left: 10px; 
   }
 
   .toggle {
     display: block;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 
   .navbar {
@@ -159,6 +171,7 @@ body {
     padding: 0 15px;
   }
 }
+
 
 .profile-container {
     display: flex;
@@ -1093,9 +1106,9 @@ body {
   
 
 .footer {
-  background-color:  #263238;
+  background-color: #263238;
   color: #ffffff;
-  padding: 40px 20px 20px;
+
   font-family: Arial, sans-serif;
 }
 
@@ -1108,32 +1121,22 @@ body {
   margin: auto;
 }
 
-.download-buttons a {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 12px 20px;
-      background-color: #ffffff;
-      color: #263238;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
 
 .footer-section {
-  flex: 1 1 200px;
   min-width: 220px;
 }
 
 .footer-section h3 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-size: 18px;
   color: #ffffff;
 }
 
+
 .footer-section ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-section ul li a {
@@ -1141,6 +1144,7 @@ body {
   text-decoration: none;
   display: block;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover,
@@ -1148,32 +1152,145 @@ body {
   color: #00cc66;
 }
 
+
+.download-buttons a {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  color: #263238;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.download-buttons a:hover {
+  background-color: #00cc66;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+.footer-section.social a {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section.social a i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.footer-section.social a:hover {
+  color: #00cc66;
+}
+
+
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
   font-size: 14px;
   border-top: 1px solid #333;
+  margin-top: 25px;
 }
+
+
+.footer {
+  background: #000; 
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #ffffff50; 
+  padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section li,
+.footer-section a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.download-buttons a {
+  background: #0b8f85;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1 1 45%;
+  transition: 0.3s;
+}
+
+.download-buttons a:hover {
+  background: #0a7a72;
+}
+
+.footer-section.social a {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #ffffff50;
+  padding-top: 15px;
+  font-size: 13px;
+}
+
 
 @media (max-width: 768px) {
   .footer-container {
-    /* min-height: 500px; */
     flex-direction: column;
-    /* padding: 40px 15px; */
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 20px;
   }
 
-  .footer-section {
-    /* margin-top: 10px;
-    margin-bottom: 20px; */
-    max-width: 100%;
+  .download-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .download-buttons a {
+    flex: 1 1 100%;
+    margin: 5px 0;
+  }
+
+  .footer-section.social a {
+    justify-content: flex-start;
   }
 }
-
-
-
-
-
-    
-
